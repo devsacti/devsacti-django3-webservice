@@ -4,6 +4,7 @@ import pandas as pd
 # python에서는 pandas가 너무 강력해서 sql 작성 부분이 예상보다 훨씬 작지만, 기본적으로 독립영역
 # per에 null도 아니고, 'N/A'로 굉장히 번거로운 값이 있음
 def querysql():
+    # commit test
     connect = sqlite3.connect('./db.sqlite3')
     df = pd.read_sql_query('select col1,per from  scraping_naverstock WHERE per <> \'N/A\' ', connect)
     connect.close()
