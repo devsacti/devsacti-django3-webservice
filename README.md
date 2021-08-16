@@ -8,6 +8,6 @@ IDE :  pycharm
 
 front : html-css, highchart, ajax of js
 
-back : python views(BeautifulSoup), sqlite3
+back : python views(BeautifulSoup, pandas), sqlite3
 
 deploy : AWS EC2 by testing deploy of django
