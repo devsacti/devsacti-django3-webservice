@@ -46,12 +46,13 @@ def getNaverstock():
 
         # if res.status_code == 200: 평가 후 에러
         res.raise_for_status()
-        # 사용을 위해선 pip install lxml
+        # lxml 사용을 위해선 pip install lxml, default는 html로 보인다.
         soup = BeautifulSoup(res.text, 'html')
 
         # 목표 데이터 : ['N','종목명','현재가','전일비','등락률','액면가', '시가총액', '상장주식수', '외국인비율','거래량','PER','ROE']
         # 인코딩 문제를 염려하여, 영어로 변형
         # 목표 데이터 : ['N','col1','col2','col3','col4','col5', 'col6', 'col7', 'col8','col9','PER','ROE']
+        # !! 추후 실행 결과, 한글로 해도 인코딩 문제가 없어, models에선 한글로 변수저장함
 
         # 각각의 행 (1위,2위,,)
         # 아래 아규먼트들은 태그들과 연관
